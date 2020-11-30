@@ -17,9 +17,14 @@ public class Plateform : MonoBehaviour
         
         float speed = 2f;
 
-        if(transform.position.z >= 4.5f)
+        if(transform.position.z >= 6f)
         {
            direction = new Vector3(0f, 0f, -1f);
+        }
+
+        if(transform.position.z <= -1.5f) 
+        {
+            direction = new Vector3(0f, 0f, 1f);
         }
        
         Vector3 newPosition = currentPosition + direction * speed * Time.deltaTime;
